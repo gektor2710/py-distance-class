@@ -12,7 +12,7 @@ class Distance:
     def __repr__(self) -> str:
         return f"Distance(km={self.km})"
 
-    def __add__(self, other: Distance) -> Distance:
+    def __add__(self, other: Distance | int | float) -> Distance:
         if isinstance(other, Distance):
             return Distance(self.km + other.km)
         return Distance(self.km + other)
